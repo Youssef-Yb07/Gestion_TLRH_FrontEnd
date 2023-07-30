@@ -16,7 +16,9 @@ export class CollaborateurService {
   getAllManagerRH(): Observable<Collaborateur[]> {
     return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/all/Managers`);
   }
-
+  getNonManagerRH(): Observable<Collaborateur[]> {
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/NonManagers`);
+  }
 
 
 

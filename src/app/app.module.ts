@@ -5,11 +5,12 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { GetAllManagersComponent } from './components/get-all-managers/get-all-managers.component';
-
+import { GetNonManagersComponent } from './components/get-non-managers/get-non-managers.component';
 @NgModule({
   declarations: [
     AppComponent,
-    GetAllManagersComponent
+    GetAllManagersComponent,
+    GetNonManagersComponent
   ],
   imports: [
     BrowserModule,

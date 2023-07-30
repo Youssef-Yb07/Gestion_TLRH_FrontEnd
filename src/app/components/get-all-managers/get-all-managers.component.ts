@@ -1,8 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {CollaborateurService} from "../../services/collaborateur.service";
 import {Router} from "@angular/router";
 import {Collaborateur} from "../../classes/collaborateur";
-import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-get-all-managers',
