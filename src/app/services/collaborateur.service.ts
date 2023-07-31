@@ -20,6 +20,8 @@ export class CollaborateurService {
     return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/NonManagers`);
   }
 
-
+  getNonAffectedCollabs(): Observable<Collaborateur[]> {
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/nonAffectedCollabs`);
+  }
 
 }
