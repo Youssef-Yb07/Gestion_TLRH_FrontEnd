@@ -24,4 +24,8 @@ export class CollaborateurService {
     return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/nonAffectedCollabs`);
   }
 
+
+  getMangerWithoutAcc() {
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/get/ManagerWithoutAcc`);
+  }
 }

@@ -16,13 +16,10 @@ export class GetAllManagersComponent implements OnInit {
   ngOnInit(): void {
     this.getAllManagers();
   }
-
   getAllManagers(){
     this.collaborateurService.getAllManagerRH().subscribe(data=>{
       this.managers=data;
       console.log(data);  },
       error => console.log(error));
   }
-
-
 }
