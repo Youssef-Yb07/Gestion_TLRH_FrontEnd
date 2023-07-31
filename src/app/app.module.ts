@@ -6,11 +6,13 @@ import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { GetAllManagersComponent } from './components/get-all-managers/get-all-managers.component';
 import { GetNonManagersComponent } from './components/get-non-managers/get-non-managers.component';
+import { CollabNonAffectedManagerComponent } from './components/collab-non-affected-manager/collab-non-affected-manager.component';
 @NgModule({
   declarations: [
     AppComponent,
     GetAllManagersComponent,
-    GetNonManagersComponent
+    GetNonManagersComponent,
+    CollabNonAffectedManagerComponent,
   ],
   imports: [
     BrowserModule,
