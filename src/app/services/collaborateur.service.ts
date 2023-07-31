@@ -21,7 +21,7 @@ export class CollaborateurService {
   }
 
   getNonAffectedCollabs(): Observable<Collaborateur[]> {
-    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/NonAffectedCollabs`);
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/nonAffectedCollabs`);
   }
 
 }
