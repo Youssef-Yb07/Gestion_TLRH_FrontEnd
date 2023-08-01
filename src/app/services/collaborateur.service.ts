@@ -26,6 +26,6 @@ export class CollaborateurService {
 
 
   getMangerWithoutAcc() {
-    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/get/ManagerWithoutAcc`);
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/ManagerWithoutAcc`);
   }
 }
