@@ -7,6 +7,7 @@ import { GetAllManagersComponent } from './components/get-all-managers/get-all-m
 import { GetNonManagersComponent } from './components/get-non-managers/get-non-managers.component';
 import { CollabNonAffectedManagerComponent } from './components/collab-non-affected-manager/collab-non-affected-manager.component';
 import { GetManagerWithoutAccComponent } from './components/get-manager-without-acc/get-manager-without-acc.component';
+import { PourcentagesParEcoleComponent } from './components/pourcentages-par-ecole/pourcentages-par-ecole.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,11 +15,12 @@ import { GetManagerWithoutAccComponent } from './components/get-manager-without-
     GetNonManagersComponent,
     CollabNonAffectedManagerComponent,
     GetManagerWithoutAccComponent,
+    PourcentagesParEcoleComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
