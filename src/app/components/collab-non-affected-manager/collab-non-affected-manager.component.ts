@@ -13,6 +13,7 @@ export class CollabNonAffectedManagerComponent implements OnInit {
   nonAffectedCollabs !: Collaborateur[];
   constructor(private collaborateurService:CollaborateurService,private router:Router) { }
 
+
   ngOnInit() {
     this.getNonAffectedCollabs();
   }

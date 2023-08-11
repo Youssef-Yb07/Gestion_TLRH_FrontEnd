@@ -6,6 +6,7 @@ import {Collaborateur} from "../classes/collaborateur";
 @Injectable({
   providedIn: 'root'
 })
+
 export class CollaborateurService {
 
   constructor(private httpClient: HttpClient) {
@@ -28,4 +29,13 @@ export class CollaborateurService {
   getMangerWithoutAcc() {
     return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/ManagerWithoutAcc`);
   }
+
+  getMaleRatio(): Observable<number>{
+    return this.httpClient.get<number>(`${this.BASE_URL}/get/MaleRatio`);
+
+  }
+  getFemaleRatio() :Observable<number>{
+    return this.httpClient.get<number>(`${this.BASE_URL}/get/FemaleRatio`);
+  }
+
 }
