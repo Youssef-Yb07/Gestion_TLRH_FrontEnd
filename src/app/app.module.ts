@@ -9,6 +9,9 @@ import { CollabNonAffectedManagerComponent } from './components/collab-non-affec
 import { GetManagerWithoutAccComponent } from './components/get-manager-without-acc/get-manager-without-acc.component';
 import { PourcentagesParEcoleComponent } from './components/pourcentages-par-ecole/pourcentages-par-ecole.component';
 import {RatioComponent} from "./components/ratio/ratio.component";
+import { RecruitmentChartComponent } from './components/recruitment-chart/recruitment-chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +21,13 @@ import {RatioComponent} from "./components/ratio/ratio.component";
     GetManagerWithoutAccComponent,
     PourcentagesParEcoleComponent,
     RatioComponent,
+    RecruitmentChartComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

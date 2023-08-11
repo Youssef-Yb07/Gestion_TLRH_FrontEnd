@@ -8,6 +8,7 @@ import {GetManagerWithoutAccComponent} from "./components/get-manager-without-ac
 
 import {PourcentagesParEcoleComponent} from "./components/pourcentages-par-ecole/pourcentages-par-ecole.component";
 import {RatioComponent} from "./components/ratio/ratio.component";
+import { RecruitmentChartComponent } from './components/recruitment-chart/recruitment-chart.component';
 
 const routes: Routes = [
   { path: 'managers', component:GetAllManagersComponent },
@@ -17,7 +18,9 @@ const routes: Routes = [
   {path:'ManagerWithoutAcc', component :GetManagerWithoutAccComponent},
   {path:'VisualizeRatio',component:RatioComponent},
   {path:'ManagerWithoutAcc', component :GetManagerWithoutAccComponent},
-  { path: 'PourcentageEcole', component:PourcentagesParEcoleComponent }
+  { path: 'PourcentageEcole', component:PourcentagesParEcoleComponent },
+  { path: 'recruitment', component:RecruitmentChartComponent }
+
 ];
 @NgModule({
   declarations: [],

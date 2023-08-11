@@ -37,5 +37,9 @@ export class CollaborateurService {
   getFemaleRatio() :Observable<number>{
     return this.httpClient.get<number>(`${this.BASE_URL}/get/FemaleRatio`);
   }
+  getRecruitmentEvolution() :Observable<any>{
+    return this.httpClient.get(`${this.BASE_URL}/getRecruitmentEvolution`);
+  }
+  
 
 }
