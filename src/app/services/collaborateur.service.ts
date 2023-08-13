@@ -30,6 +30,10 @@ export class CollaborateurService {
     return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/ManagerWithoutAcc`);
   }
 
+  getAllCollaborateur(): Observable<Collaborateur[]> {
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/all`);
+  }
+
   getMaleRatio(): Observable<number>{
     return this.httpClient.get<number>(`${this.BASE_URL}/get/MaleRatio`);
 

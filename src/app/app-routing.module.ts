@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {GetAllManagersComponent} from "./components/get-all-managers/get-all-managers.component";
 import {GetNonManagersComponent} from "./components/get-non-managers/get-non-managers.component";
-import { CollabNonAffectedManagerComponent } from './components/collab-non-affected-manager/collab-non-affected-manager.component';
+import {CollabNonAffectedManagerComponent } from './components/collab-non-affected-manager/collab-non-affected-manager.component';
 import {GetManagerWithoutAccComponent} from "./components/get-manager-without-acc/get-manager-without-acc.component";
-
 import {PourcentagesParEcoleComponent} from "./components/pourcentages-par-ecole/pourcentages-par-ecole.component";
 import {RatioComponent} from "./components/ratio/ratio.component";
 import { RecruitmentChartComponent } from './components/recruitment-chart/recruitment-chart.component';
+import { GetAllCollaborateursComponent } from './components/get-all-collaborateurs/get-all-collaborateurs.component';
 
 const routes: Routes = [
   { path: 'managers', component:GetAllManagersComponent },
@@ -19,8 +19,8 @@ const routes: Routes = [
   {path:'VisualizeRatio',component:RatioComponent},
   {path:'ManagerWithoutAcc', component :GetManagerWithoutAccComponent},
   { path: 'PourcentageEcole', component:PourcentagesParEcoleComponent },
-  { path: 'recruitment', component:RecruitmentChartComponent }
-
+  { path: 'recruitment', component:RecruitmentChartComponent },
+  { path: 'collaborateurs', component:GetAllCollaborateursComponent},
 ];
 @NgModule({
   declarations: [],

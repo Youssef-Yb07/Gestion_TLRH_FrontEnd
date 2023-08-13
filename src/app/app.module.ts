@@ -11,7 +11,7 @@ import { PourcentagesParEcoleComponent } from './components/pourcentages-par-eco
 import {RatioComponent} from "./components/ratio/ratio.component";
 import { RecruitmentChartComponent } from './components/recruitment-chart/recruitment-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-
+import  {GetAllCollaborateursComponent} from './components/get-all-collaborateurs/get-all-collaborateurs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     GetManagerWithoutAccComponent,
     PourcentagesParEcoleComponent,
     RatioComponent,
-    RecruitmentChartComponent
+    RecruitmentChartComponent,
+    GetAllCollaborateursComponent,
+
+
   ],
   imports: [
     BrowserModule,
