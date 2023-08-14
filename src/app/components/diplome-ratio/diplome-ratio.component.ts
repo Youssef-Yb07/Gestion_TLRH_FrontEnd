@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CollaborateurService } from 'src/app/services/collaborateur.service';
 import { Chart, ChartData} from 'chart.js/auto';
 import { create } from 'd3-selection';
+import {DiplomeService} from "../../services/diplome.service";
 
 @Component({
   selector: 'app-diplome-ratio',
@@ -11,14 +12,14 @@ export class DiplomeRatioComponent implements OnInit {
   diplomaRatios: Map<string, number> = new Map<string, number>();
   chart: Chart<'pie'>;
 
-  constructor(private collaborateurService: CollaborateurService) {}
+  constructor(private diplomeService: DiplomeService) {}
 
   ngOnInit() {
     this.getRatios();
   }
 
   getRatios() {
-    this.collaborateurService.getDiplomeRatios().subscribe(
+    this.diplomeService.getDiplomeRatios().subscribe(
       (data: Map<string, number>) => {
         this.diplomaRatios = data;
         this.createChart(this.diplomaRatios);
@@ -45,7 +46,7 @@ export class DiplomeRatioComponent implements OnInit {
           labels: labels,
           datasets: [
             {
-              label: 'Pourcentages Par Diplome',
+              label: 'Pourcentages Par Type de Diplome',
               data: values,
               backgroundColor: [
                 'rgb(85,137,199)',

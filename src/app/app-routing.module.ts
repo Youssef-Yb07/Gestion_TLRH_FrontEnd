@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'managers', pathMatch: 'full' },
   { path: 'nonManagers', component:GetNonManagersComponent },
   { path: 'nonAffectedCollabs', component: CollabNonAffectedManagerComponent },
-  {path:'VisualizeRatio',component:RatioComponent},
+    {path:'VisualizeRatio',component:RatioComponent},
   {path:'ManagerWithoutAcc', component :GetManagerWithoutAccComponent},
   { path: 'PourcentageEcole', component:PourcentagesParEcoleComponent },
   { path: 'recruitment', component:RecruitmentChartComponent },
