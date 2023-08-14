@@ -12,6 +12,7 @@ import {RatioComponent} from "./components/ratio/ratio.component";
 import { RecruitmentChartComponent } from './components/recruitment-chart/recruitment-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import  {GetAllCollaborateursComponent} from './components/get-all-collaborateurs/get-all-collaborateurs.component';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import  {GetAllCollaborateursComponent} from './components/get-all-collaborateur
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    CommonModule,
     NgxChartsModule
   ],
   providers: [],

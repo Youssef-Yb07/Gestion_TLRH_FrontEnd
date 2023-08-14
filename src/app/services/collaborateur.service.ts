@@ -44,6 +44,9 @@ export class CollaborateurService {
   getRecruitmentEvolution() :Observable<any>{
     return this.httpClient.get(`${this.BASE_URL}/getRecruitmentEvolution`);
   }
-  
+
+  getDiplomeRatios(): Observable<Map<string, number>>{
+    return this.httpClient.get<Map<string, number>>(`${this.BASE_URL}/get/DiplomaRatios`);
+  }
 
 }
