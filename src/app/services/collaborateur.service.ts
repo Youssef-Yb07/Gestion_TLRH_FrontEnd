@@ -49,4 +49,8 @@ export class CollaborateurService {
     return this.httpClient.get<Map<string, number>>(`${this.BASE_URL}/get/DiplomaRatios`);
   }
 
+  CalculateTurnOver():Observable<any>{
+    return this.httpClient.get(`${this.BASE_URL}/get/TurnOver/Annee`);
+  }
+
 }

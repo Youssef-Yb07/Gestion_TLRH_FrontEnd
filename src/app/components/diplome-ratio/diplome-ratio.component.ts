@@ -5,7 +5,7 @@ import { create } from 'd3-selection';
 import {DiplomeService} from "../../services/diplome.service";
 
 @Component({
-  selector: 'app-diplome-ratio',
+  selector: 'app-diplome-Male-Female-ratio',
   templateUrl: './diplome-ratio.component.html',
 })
 export class DiplomeRatioComponent implements OnInit {

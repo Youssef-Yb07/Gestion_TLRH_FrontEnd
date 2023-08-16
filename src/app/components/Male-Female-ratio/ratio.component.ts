@@ -4,7 +4,7 @@ import { CollaborateurService } from "../../services/collaborateur.service";
 import { ChartData } from "chart.js";
 
 @Component({
-  selector: 'app-ratio',
+  selector: 'app-Male-Female-ratio',
   templateUrl: './ratio.component.html',
   styleUrls: ['./ratio.component.css']
 })
@@ -23,7 +23,7 @@ export class RatioComponent implements OnInit {
         }
       },
       error => {
-        console.error('Error fetching female ratio:', error);
+        console.error('Error fetching female Male-Female-ratio:', error);
       }
     );
 
@@ -35,7 +35,7 @@ export class RatioComponent implements OnInit {
         }
       },
       error => {
-        console.error('Error fetching male ratio:', error);
+        console.error('Error fetching male Male-Female-ratio:', error);
       }
     );
   }
