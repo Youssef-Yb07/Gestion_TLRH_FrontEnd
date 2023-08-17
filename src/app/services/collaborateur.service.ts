@@ -53,4 +53,8 @@ export class CollaborateurService {
     return this.httpClient.get(`${this.BASE_URL}/get/TurnOver/Annee`);
   }
 
+  getTechnologies() {
+    return this.httpClient.get(`${this.BASE_URL}get/competences`);
+  }
+
 }
