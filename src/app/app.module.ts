@@ -14,7 +14,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import  {GetAllCollaborateursComponent} from './components/get-all-collaborateurs/get-all-collaborateurs.component';
 import { CommonModule } from '@angular/common';
 import { TauxTurnOverComponent } from './components/taux-turn-over/taux-turn-over.component';
-import {TechnologiesComponent} from "./components/technologies/technologies.component";
+// import {TechnologiesComponent} from "./components/technologies/technologies.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,7 @@ import {TechnologiesComponent} from "./components/technologies/technologies.comp
     RecruitmentChartComponent,
     GetAllCollaborateursComponent,
     TauxTurnOverComponent,
-    TechnologiesComponent,
+    // TechnologiesComponent,
 
   ],
   imports: [
