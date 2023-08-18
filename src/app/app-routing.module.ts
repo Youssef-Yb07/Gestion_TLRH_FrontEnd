@@ -11,6 +11,7 @@ import { RecruitmentChartComponent } from './components/recruitment-chart/recrui
 import { GetAllCollaborateursComponent } from './components/get-all-collaborateurs/get-all-collaborateurs.component';
 import { DiplomeRatioComponent } from './components/diplome-ratio/diplome-ratio.component';
 import {TauxTurnOverComponent} from "./components/taux-turn-over/taux-turn-over.component";
+import { SalaryEvoltionGraphComponent } from './components/salary-evoltion-graph/salary-evoltion-graph.component';
 
 const routes: Routes = [
   { path: 'managers', component:GetAllManagersComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'recruitment', component:RecruitmentChartComponent },
   { path: 'collaborateurs', component:GetAllCollaborateursComponent},
   { path: 'diplomeRatio', component: DiplomeRatioComponent},
-  { path :'TurnOver' ,component: TauxTurnOverComponent}
+  { path :'TurnOver' ,component: TauxTurnOverComponent},
+  { path :'salaryEvolution' ,component: SalaryEvoltionGraphComponent},
 ];
 @NgModule({
   declarations: [],

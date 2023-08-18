@@ -26,15 +26,13 @@ import { TauxTurnOverComponent } from './components/taux-turn-over/taux-turn-ove
     RecruitmentChartComponent,
     GetAllCollaborateursComponent,
     TauxTurnOverComponent,
-
-
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgxChartsModule,
     AppRoutingModule,
     CommonModule,
-    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
