@@ -54,6 +54,10 @@ export class CollaborateurService {
     );
   }
 
+  getSalaryEvolutionOfCollab(id:number): Observable<any>{
+    return this.httpClient.get<Map<number, number>>(`${this.BASE_URL}/SalaryEvolution/${id}`);
+  }
+
   CalculateTurnOver(): Observable<any> {
     return this.httpClient.get(`${this.BASE_URL}/get/TurnOver/Annee`);
   }
@@ -64,5 +68,6 @@ export class CollaborateurService {
 
   getSalaryEvolutions(id: number): Observable<Map<Date, number>> {
     return this.httpClient.get<Map<Date, number>>(`${this.BASE_URL}/evolution/${id}`);
+
   }
 }

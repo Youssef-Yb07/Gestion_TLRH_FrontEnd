@@ -13,7 +13,11 @@ import { RecruitmentChartComponent } from './components/recruitment-chart/recrui
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import  {GetAllCollaborateursComponent} from './components/get-all-collaborateurs/get-all-collaborateurs.component';
 import { CommonModule } from '@angular/common';
+import { SalaryEvolutionOfCollabComponent } from './components/salary-evolution-of-collab/salary-evolution-of-collab.component';
+import { FormsModule } from '@angular/forms';
+import { salaryPieComponent } from './components/salary-pie/salary-pie.component';
 import { TauxTurnOverComponent } from './components/taux-turn-over/taux-turn-over.component';
+import {TechnologiesComponent} from "./components/technologies/technologies.component";
 // import {TechnologiesComponent} from "./components/technologies/technologies.component";
 @NgModule({
   declarations: [
@@ -26,16 +30,21 @@ import { TauxTurnOverComponent } from './components/taux-turn-over/taux-turn-ove
     RatioComponent,
     RecruitmentChartComponent,
     GetAllCollaborateursComponent,
+    SalaryEvolutionOfCollabComponent,
+    salaryPieComponent,
     TauxTurnOverComponent,
-    // TechnologiesComponent,
+    TechnologiesComponent,
 
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     NgxChartsModule,
     AppRoutingModule,
     CommonModule,
+    NgxChartsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
