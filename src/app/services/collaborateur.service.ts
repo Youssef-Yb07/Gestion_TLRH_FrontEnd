@@ -48,5 +48,7 @@ export class CollaborateurService {
   getDiplomeRatios(): Observable<Map<string, number>>{
     return this.httpClient.get<Map<string, number>>(`${this.BASE_URL}/get/DiplomaRatios`);
   }
-
+  getSalaryEvolutionOfCollab(id:number): Observable<any>{
+    return this.httpClient.get<Map<number, number>>(`${this.BASE_URL}/SalaryEvolution/${id}`);
+  }
 }

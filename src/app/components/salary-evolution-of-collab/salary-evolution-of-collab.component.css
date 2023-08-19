@@ -1,0 +1,16 @@
+tbody tr:nth-child(even) {
+    background-color: rgb(183, 210, 241);
+  }
+.chartType{
+  text-align: center;
+}
+.pie-container {
+  max-width: 400px; /* Adjust the width as needed */
+  max-height: 400px; /* Adjust the height as needed */
+  margin: 0 auto;
+}
+.bar-container {
+  max-width: 700px; /* Adjust the width as needed */
+  max-height: 800px; /* Adjust the height as needed */
+  margin: 0 auto; /* Center the chart within the container */
+}

@@ -10,18 +10,23 @@ import {RatioComponent} from "./components/ratio/ratio.component";
 import { RecruitmentChartComponent } from './components/recruitment-chart/recruitment-chart.component';
 import { GetAllCollaborateursComponent } from './components/get-all-collaborateurs/get-all-collaborateurs.component';
 import { DiplomeRatioComponent } from './components/diplome-ratio/diplome-ratio.component';
+import { SalaryEvolutionOfCollabComponent } from './components/salary-evolution-of-collab/salary-evolution-of-collab.component';
+
 
 const routes: Routes = [
   { path: 'managers', component:GetAllManagersComponent },
   { path: '', redirectTo: 'managers', pathMatch: 'full' },
   { path: 'nonManagers', component:GetNonManagersComponent },
   { path: 'nonAffectedCollabs', component: CollabNonAffectedManagerComponent },
-    {path:'VisualizeRatio',component:RatioComponent},
+  {path:'MaleFemaleRatio',component:RatioComponent},
   {path:'ManagerWithoutAcc', component :GetManagerWithoutAccComponent},
   { path: 'PourcentageEcole', component:PourcentagesParEcoleComponent },
   { path: 'recruitment', component:RecruitmentChartComponent },
   { path: 'collaborateurs', component:GetAllCollaborateursComponent},
-  { path: 'diplomeRatio', component: DiplomeRatioComponent}
+  { path: 'diplomeRatio', component: DiplomeRatioComponent},
+  {path:'salaryEvolution/:id' ,component:SalaryEvolutionOfCollabComponent},
+
+  
 ];
 @NgModule({
   declarations: [],
