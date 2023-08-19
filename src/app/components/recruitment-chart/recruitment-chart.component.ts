@@ -4,7 +4,7 @@ import { CollaborateurService } from 'src/app/services/collaborateur.service';
 @Component({
   selector: 'app-recruitment-chart',
   templateUrl: './recruitment-chart.component.html',
-  styleUrls: ['./recruitment-chart.component.css']
+
 })
 export class RecruitmentChartComponent {
   recruitmentData: any;

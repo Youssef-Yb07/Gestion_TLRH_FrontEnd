@@ -14,7 +14,7 @@ interface SalaryData {
   styleUrls: ['./salary-evolution-of-collab.component.css']
 })
 export class SalaryEvolutionOfCollabComponent implements OnInit {
-  salaryEvolution: SalaryData[]; // Define the type here
+  salaryEvolution: SalaryData[]; 
   collaboratorId: number;
   selectedChartType: string = 'bar'; 
   chart: Chart;

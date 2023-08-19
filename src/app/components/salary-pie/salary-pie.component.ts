@@ -18,7 +18,7 @@ interface SalaryData {
 export class salaryPieComponent {
   salaryEvolution: Map<number, number>;
   collaboratorId: number;
-  selectedChartType: ChartType = 'pie'; // Default chart type
+  selectedChartType: ChartType = 'pie'; 
   chart: Chart;
 
   @ViewChild('test') testCanvas: ElementRef;
@@ -47,7 +47,7 @@ export class salaryPieComponent {
     
     if (ctx) {
       if (this.chart) {
-        this.chart.destroy(); // Destroy the previous chart instance if it exists
+        this.chart.destroy(); 
       }
       if(this.selectedChartType == 'pie'){
       this.chart = new Chart(ctx, {
