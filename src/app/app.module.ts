@@ -18,10 +18,13 @@ import { FormsModule } from '@angular/forms';
 import { salaryPieComponent } from './components/salary-pie/salary-pie.component';
 import { TauxTurnOverComponent } from './components/taux-turn-over/taux-turn-over.component';
 import {TechnologiesComponent} from "./components/technologies/technologies.component";
-// import {TechnologiesComponent} from "./components/technologies/technologies.component";
+import { RouterModule } from '@angular/router';
+import { SideBarComponent } from './Layout/side-bar/side-bar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    SideBarComponent,
     GetAllManagersComponent,
     GetNonManagersComponent,
     CollabNonAffectedManagerComponent,
@@ -34,7 +37,6 @@ import {TechnologiesComponent} from "./components/technologies/technologies.comp
     salaryPieComponent,
     TauxTurnOverComponent,
     TechnologiesComponent,
-
   ],
   imports: [
     FormsModule,
@@ -44,7 +46,6 @@ import {TechnologiesComponent} from "./components/technologies/technologies.comp
     AppRoutingModule,
     CommonModule,
     NgxChartsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
