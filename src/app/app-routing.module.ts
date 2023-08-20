@@ -14,13 +14,13 @@ import { SalaryEvolutionOfCollabComponent } from './components/salary-evolution-
 import {TauxTurnOverComponent} from "./components/taux-turn-over/taux-turn-over.component";
 import { SalaryEvoltionGraphComponent } from './components/salary-evoltion-graph/salary-evoltion-graph.component';
 import {TechnologiesComponent} from "./components/technologies/technologies.component";
-import { SideBarComponent } from './Layout/side-bar/side-bar.component';
+import { LayoutComponent } from './Layout/layout/layout.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: SideBarComponent,
+    component: LayoutComponent,
     children: [
       { path: '', redirectTo: 'managers', pathMatch: 'full' },
       { path: 'managers', component:GetAllManagersComponent },

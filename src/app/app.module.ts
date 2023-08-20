@@ -18,13 +18,16 @@ import { FormsModule } from '@angular/forms';
 import { salaryPieComponent } from './components/salary-pie/salary-pie.component';
 import { TauxTurnOverComponent } from './components/taux-turn-over/taux-turn-over.component';
 import {TechnologiesComponent} from "./components/technologies/technologies.component";
-import { RouterModule } from '@angular/router';
 import { SideBarComponent } from './Layout/side-bar/side-bar.component';
+import { HeaderComponent } from './Layout/header/header.component';
+import { LayoutComponent } from './Layout/layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LayoutComponent,
     SideBarComponent,
+    HeaderComponent,
     GetAllManagersComponent,
     GetNonManagersComponent,
     CollabNonAffectedManagerComponent,
