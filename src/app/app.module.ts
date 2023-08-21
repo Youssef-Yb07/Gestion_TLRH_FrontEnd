@@ -3,39 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
-import { GetAllManagersComponent } from './components/get-all-managers/get-all-managers.component';
-import { GetNonManagersComponent } from './components/get-non-managers/get-non-managers.component';
-import { CollabNonAffectedManagerComponent } from './components/collab-non-affected-manager/collab-non-affected-manager.component';
-import { GetManagerWithoutAccComponent } from './components/get-manager-without-acc/get-manager-without-acc.component';
-import { PourcentagesParEcoleComponent } from './components/pourcentages-par-ecole/pourcentages-par-ecole.component';
-import {RatioComponent} from "./components/Male-Female-ratio/ratio.component";
-import { RecruitmentChartComponent } from './components/recruitment-chart/recruitment-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import  {GetAllCollaborateursComponent} from './components/get-all-collaborateurs/get-all-collaborateurs.component';
 import { CommonModule } from '@angular/common';
-import { SalaryEvolutionOfCollabComponent } from './components/salary-evolution-of-collab/salary-evolution-of-collab.component';
 import { FormsModule } from '@angular/forms';
-import { salaryPieComponent } from './components/salary-pie/salary-pie.component';
-import { TauxTurnOverComponent } from './components/taux-turn-over/taux-turn-over.component';
-import {TechnologiesComponent} from "./components/technologies/technologies.component";
 import { MaterialModule } from './material.module';
-import { LayoutModule } from './Layout/layout.module';
+import { PagesModule } from './Pages/pages.module';
+import { LayoutComponent } from './Layout/layout/layout.component';
+import { SideBarComponent } from './Layout/layout/Components/side-bar/side-bar.component';
+import { HeaderComponent } from './Layout/layout/Components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GetAllManagersComponent,
-    GetNonManagersComponent,
-    CollabNonAffectedManagerComponent,
-    GetManagerWithoutAccComponent,
-    PourcentagesParEcoleComponent,
-    RatioComponent,
-    RecruitmentChartComponent,
-    GetAllCollaborateursComponent,
-    SalaryEvolutionOfCollabComponent,
-    salaryPieComponent,
-    TauxTurnOverComponent,
-    TechnologiesComponent,
+    LayoutComponent,
+    SideBarComponent,
+    HeaderComponent,
   ],
   imports: [
     FormsModule,
@@ -43,7 +25,6 @@ import { LayoutModule } from './Layout/layout.module';
     HttpClientModule,
     AppRoutingModule,
     CommonModule,
-    LayoutModule,
     MaterialModule,
     NgxChartsModule,
   ],
