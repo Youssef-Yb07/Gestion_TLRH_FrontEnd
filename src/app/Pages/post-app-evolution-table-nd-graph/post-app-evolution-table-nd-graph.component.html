@@ -1,0 +1,20 @@
+<div class="chart-container">
+  <canvas id="evolutionChart"></canvas>
+</div>
+
+<div class="table-container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Année</th>
+      <th>Poste(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let entry of postevolution | keyvalue">
+      <td>{{ entry.key }}</td>
+      <td>{{ entry.value.join(', ') }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
