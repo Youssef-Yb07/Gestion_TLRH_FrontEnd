@@ -19,6 +19,7 @@
             "polyfills": [
               "zone.js"
             ],
+            "inlineStyleLanguage": "scss",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -27,6 +28,7 @@
             ],
             "styles": [
               "src/styles.css"
+              "src/assets/scss/style.scss"
             ],
             "scripts": ["src/assets/js/app.min.js"
             , "src/assets/js/dashboard.js"
@@ -92,8 +94,10 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
+            "inlineStyleLanguage": "scss",
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/scss/style.scss"
             ],
             "scripts": []
           }

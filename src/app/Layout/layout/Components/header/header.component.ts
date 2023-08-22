@@ -1,14 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Output,
+  EventEmitter,
+  Input,
+  ViewEncapsulation,
+} from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
+  encapsulation: ViewEncapsulation.None,
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  @Input() showToggle = true;
+  @Input() toggleChecked = false;
+  @Output() toggleMobileNav = new EventEmitter<void>();
+  @Output() toggleMobileFilterNav = new EventEmitter<void>();
+  @Output() toggleCollapsed = new EventEmitter<void>();
 
-  constructor() { }
+  showFiller = false;
 
-  ngOnInit() {
-  }
-
+  constructor(public dialog: MatDialog) {}
 }

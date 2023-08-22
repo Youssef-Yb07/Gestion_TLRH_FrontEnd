@@ -7,10 +7,15 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
-import { PagesModule } from './Pages/pages.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutComponent } from './Layout/layout/layout.component';
 import { SideBarComponent } from './Layout/layout/Components/side-bar/side-bar.component';
 import { HeaderComponent } from './Layout/layout/Components/header/header.component';
+import { AppNavItemComponent } from './Layout/layout/Components/side-bar/nav-item/nav-item.component';
+
+// icons
+import { TablerIconsModule } from 'angular-tabler-icons';
+import * as TablerIcons from 'angular-tabler-icons/icons';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,7 @@ import { HeaderComponent } from './Layout/layout/Components/header/header.compon
     LayoutComponent,
     SideBarComponent,
     HeaderComponent,
+    AppNavItemComponent
   ],
   imports: [
     FormsModule,
@@ -26,8 +32,11 @@ import { HeaderComponent } from './Layout/layout/Components/header/header.compon
     AppRoutingModule,
     CommonModule,
     MaterialModule,
+    BrowserAnimationsModule,
     NgxChartsModule,
+    TablerIconsModule.pick(TablerIcons),
   ],
+  exports: [TablerIconsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

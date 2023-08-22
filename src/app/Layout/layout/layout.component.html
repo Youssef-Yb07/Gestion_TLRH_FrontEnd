@@ -1,50 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>club UIR</title>
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="src/assets/images/logos/favicon.png"
-    />
-    <link rel="stylesheet" href="/styles.css" />
-    <style>
-      .chart-container {
-        width: 400px;
-        height: 300px;
-        justify-content: center;
-      }
-    </style>
-  </head>
+<mat-sidenav-container
+  class="mainWrapper blue_theme light-theme"
+  autosize
+  autoFocus
+  dir="ltr"
+>
+  <!-- ============================================================== -->
+  <!-- Vertical Sidebar -->
+  <!-- ============================================================== -->
 
-  <body style>
-    <div
-      class="page-wrapper"
-      id="main-wrapper"
-      data-layout="vertical"
-      data-navbarbg="skin6"
-      data-sidebartype="full"
-      data-sidebar-position="fixed"
-      data-header-position="fixed"
-    >
-      <app-side-bar></app-side-bar>
-      <div class="body-wrapper" style="
-        display: inline-block;
-  vertical-align: top;
-  padding: 10px;
-      ">
-        <app-header></app-header>
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-    <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../assets/js/sidebarmenu.js"></script>
-    <script src="../../../assets/js/app.min.js"></script>
-    <script src="../../../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="../../../assets/libs/simplebar/dist/simplebar.js"></script>
-    <script src="../../../assets/js/dashboard.js"></script>
-  </body>
-</html>
+  <mat-sidenav
+    #leftsidenav
+    [mode]="isOver ? 'over' : 'side'"
+    [opened]="!isOver"
+    (openedChange)="onSidenavOpenedChange($event)"
+    (closedStart)="onSidenavClosedStart()"
+    class="sidebarNav"
+  >
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <!-- ============================================================== -->
+  <!-- Main Content -->
+  <!-- ============================================================== -->
+  <mat-sidenav-content class="contentWrapper">
+    <!-- ============================================================== -->
+    <!-- VerticalHeader -->
+    <!-- ============================================================== -->
+
+    <app-header
+      [showToggle]="!isOver"
+      (toggleCollapsed)="toggleCollapsed()"
+      (toggleMobileNav)="sidenav.toggle()"
+    ></app-header>
+
+    <main class="pageWrapper">
+      <!-- ============================================================== -->
+      <!-- Outlet -->
+      <!-- ============================================================== -->
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

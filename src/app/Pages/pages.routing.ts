@@ -24,7 +24,6 @@ export const PagesRoutes: Routes = [
       { path: 'MaleFemaleRatio', component: RatioComponent },
       { path: 'ManagerWithoutAcc', component: GetManagerWithoutAccComponent },
       { path: 'VisualizeRatio', component: RatioComponent },
-      { path: 'ManagerWithoutAcc', component: GetManagerWithoutAccComponent },
       { path: 'PourcentageEcole', component: PourcentagesParEcoleComponent },
       { path: 'recruitment', component: RecruitmentChartComponent },
       { path: 'collaborateurs', component: GetAllCollaborateursComponent },
