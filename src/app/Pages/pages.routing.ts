@@ -12,6 +12,9 @@ import { SalaryEvolutionOfCollabComponent } from './salary-evolution-of-collab/s
 import { TauxTurnOverComponent } from './taux-turn-over/taux-turn-over.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { SalaryEvoltionGraphComponent } from './salary-evoltion-graph/salary-evoltion-graph.component';
+import {
+  PostAppEvolutionTableNdGraphComponent
+} from "./post-app-evolution-table-nd-graph/post-app-evolution-table-nd-graph.component";
 
 export const PagesRoutes: Routes = [
       { path: '', redirectTo: 'managers', pathMatch: 'full' },
@@ -35,4 +38,5 @@ export const PagesRoutes: Routes = [
       { path: 'TurnOver', component: TauxTurnOverComponent },
       { path: 'Technologies', component: TechnologiesComponent },
       { path: 'salaryEvolution', component: SalaryEvoltionGraphComponent },
+      { path : 'PostAppEvolution' , component : PostAppEvolutionTableNdGraphComponent},
 ];

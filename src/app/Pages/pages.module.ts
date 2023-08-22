@@ -22,6 +22,9 @@ import { MaterialModule } from '../material.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {
+  PostAppEvolutionTableNdGraphComponent
+} from "./post-app-evolution-table-nd-graph/post-app-evolution-table-nd-graph.component";
 
 @NgModule({
   declarations: [
@@ -34,9 +37,11 @@ import { FormsModule } from '@angular/forms';
     RecruitmentChartComponent,
     GetAllCollaborateursComponent,
     SalaryEvolutionOfCollabComponent,
+    PostAppEvolutionTableNdGraphComponent,
     salaryPieComponent,
     TauxTurnOverComponent,
     TechnologiesComponent,
+
   ],
   imports: [
     CommonModule,

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Collaborateur } from '../classes/collaborateur';
+import {types} from "sass";
+import List = types.List;
 
 @Injectable({
   providedIn: 'root',
@@ -69,5 +71,8 @@ export class CollaborateurService {
   getSalaryEvolutions(id: number): Observable<Map<Date, number>> {
     return this.httpClient.get<Map<Date, number>>(`${this.BASE_URL}/evolution/${id}`);
 
+  }
+  getPostAPPEvolution(collaborateurId: number): Observable<Map<number, string[]>> {
+    return this.httpClient.get<Map<number, string[]>>(`${this.BASE_URL}get/EvolutionPostAPP/${collaborateurId}`);
   }
 }
