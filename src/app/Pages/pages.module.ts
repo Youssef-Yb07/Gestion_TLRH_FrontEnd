@@ -12,7 +12,7 @@ import { SalaryEvolutionOfCollabComponent } from './salary-evolution-of-collab/s
 import { salaryPieComponent } from './salary-pie/salary-pie.component';
 import { TauxTurnOverComponent } from './taux-turn-over/taux-turn-over.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
-
+import{DiplomeRatioComponent} from './diplome-ratio/diplome-ratio.component';
 // -------------------- Routing --------------------->
 import { RouterModule } from '@angular/router';
 import { PagesRoutes } from './pages.routing';
@@ -41,6 +41,7 @@ import {
     salaryPieComponent,
     TauxTurnOverComponent,
     TechnologiesComponent,
+    DiplomeRatioComponent,
 
   ],
   imports: [

@@ -36,7 +36,8 @@ export const PagesRoutes: Routes = [
         component: SalaryEvolutionOfCollabComponent,
       },
       { path: 'TurnOver', component: TauxTurnOverComponent },
-      { path: 'Technologies', component: TechnologiesComponent },
+      { path: 'Technologies/:id', component: TechnologiesComponent },
       { path: 'salaryEvolution', component: SalaryEvoltionGraphComponent },
       { path : 'PostAppEvolution' , component : PostAppEvolutionTableNdGraphComponent},
+      { path: 'diplomeRatio', component: DiplomeRatioComponent },
 ];

@@ -14,6 +14,7 @@ export class RecruitmentChartComponent {
   ngOnInit(): void {
     this.collaborateurService.getRecruitmentEvolution().subscribe(data => {
       this.recruitmentData = Object.entries(data).map(([year, count]) => ({ name: year, value: count }));
+      console.log(this.recruitmentData);
     });
   }
 }

@@ -64,8 +64,8 @@ export class CollaborateurService {
     return this.httpClient.get(`${this.BASE_URL}/get/TurnOver/Annee`);
   }
 
-  getTechnologies() {
-    return this.httpClient.get(`${this.BASE_URL}get/competences`);
+  getTechnologies(id: number): Observable<any> {
+    return this.httpClient.get<any>(`${this.BASE_URL}/get/competences/${id}`);
   }
 
   getSalaryEvolutions(id: number): Observable<Map<Date, number>> {
