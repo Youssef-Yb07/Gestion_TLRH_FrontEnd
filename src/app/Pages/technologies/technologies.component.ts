@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CollaborateurService } from "../../services/collaborateur.service";
 import { ActivatedRoute } from '@angular/router';
-interface SalaryData {
-  name: string;
-  value: number;
-}
+
 @Component({
   selector: 'app-technologies',
   templateUrl: './technologies.component.html',
