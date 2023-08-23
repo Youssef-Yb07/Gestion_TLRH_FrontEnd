@@ -14,17 +14,17 @@ export class TechnologiesComponent implements OnInit {
   constructor(private collaborateurService: CollaborateurService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log("hii");
+
     this.route.params.subscribe(params => {
-      console.log("hii");
+
       this.collaborateurId = +params['id']; 
 
       this.collaborateurService.getTechnologies(this.collaborateurId).subscribe((data: Map<number, number>) => {
-        this.technologies = Object.entries(data).map(([year, salary]) => ({
-          name: year.toString(),
-          value: salary
+        this.technologies = Object.entries(data).map(([technologie, niveau]) => ({
+          name: technologie.toString(),
+          value: niveau
         }));
-        console.log(this.technologies);
+
       });
     });
   }
