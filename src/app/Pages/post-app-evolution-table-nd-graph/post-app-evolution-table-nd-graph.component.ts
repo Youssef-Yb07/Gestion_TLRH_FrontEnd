@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {CollaborateurService} from "../../services/collaborateur.service";
 import {Chart} from "chart.js/auto";
 import {ActivatedRoute} from "@angular/router";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-post-app-evolution-table-nd-graph',
@@ -34,11 +35,14 @@ export class PostAppEvolutionTableNdGraphComponent implements OnInit {
       data => {
         this.postevolution = data;
         this.showChart();
+        console.log(data);
       },
       error => {
         console.error('Error fetching Post App Evolution data:', error);
       }
+
     );
+
   }
 
 

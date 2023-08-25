@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable, Optional} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Collaborateur } from '../classes/collaborateur';
@@ -40,6 +40,10 @@ export class CollaborateurService {
     return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/all`);
   }
 
+  getCollaborateurById(id:number): Observable<Collaborateur> {
+    return this.httpClient.get<Collaborateur>(`${this.BASE_URL}/get/Collaborateur/byId/${id}`);
+  }
+
   getMaleRatio(): Observable<number> {
     return this.httpClient.get<number>(`${this.BASE_URL}/get/MaleRatio`);
   }
@@ -73,6 +77,12 @@ export class CollaborateurService {
 
   }
   getPostAPPEvolution(collaborateurId: number): Observable<Map<number, string[]>> {
-    return this.httpClient.get<Map<number, string[]>>(`${this.BASE_URL}get/EvolutionPostAPP/${collaborateurId}`);
+    return this.httpClient.get<Map<number, string[]>>(`${this.BASE_URL}/get/EvolutionPostAPP/${collaborateurId}`);
   }
+
+  updateCollaborateurBy3Actors(matricule: number, collaborateurDto: any): Observable<any> {
+    const url = `${this.BASE_URL}/update/By3Actors?matricule=${matricule}`;
+    return this.httpClient.put(url, collaborateurDto);
+  }
+
 }

@@ -25,11 +25,17 @@ import { FormsModule } from '@angular/forms';
 import {
   PostAppEvolutionTableNdGraphComponent
 } from "./post-app-evolution-table-nd-graph/post-app-evolution-table-nd-graph.component";
+import {CollaboratorsListComponent} from "./collaborators-list/collaborators-list.component";
+import {
+  UpdateCollaboratorByTreeactorsComponent
+} from "./update-collaborator-by-treeactors/update-collaborator-by-treeactors.component";
 
 @NgModule({
   declarations: [
     GetAllManagersComponent,
     GetNonManagersComponent,
+    CollaboratorsListComponent,
+    UpdateCollaboratorByTreeactorsComponent,
     CollabNonAffectedManagerComponent,
     GetManagerWithoutAccComponent,
     PourcentagesParEcoleComponent,

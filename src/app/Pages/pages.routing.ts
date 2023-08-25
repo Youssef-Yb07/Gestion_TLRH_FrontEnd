@@ -15,6 +15,10 @@ import { SalaryEvoltionGraphComponent } from './salary-evoltion-graph/salary-evo
 import {
   PostAppEvolutionTableNdGraphComponent
 } from "./post-app-evolution-table-nd-graph/post-app-evolution-table-nd-graph.component";
+import {
+  UpdateCollaboratorByTreeactorsComponent
+} from "./update-collaborator-by-treeactors/update-collaborator-by-treeactors.component";
+import {CollaboratorsListComponent} from "./collaborators-list/collaborators-list.component";
 
 export const PagesRoutes: Routes = [
       { path: '', redirectTo: 'managers', pathMatch: 'full' },
@@ -35,9 +39,13 @@ export const PagesRoutes: Routes = [
         path: 'salaryEvolution/:id',
         component: SalaryEvolutionOfCollabComponent,
       },
+      { path :'listofcollaboratorstoupdate',component:CollaboratorsListComponent},
+      { path:'updateCollaboratorsBy3Actor/:id' ,component:UpdateCollaboratorByTreeactorsComponent},
       { path: 'TurnOver', component: TauxTurnOverComponent },
       { path: 'Technologies/:id', component: TechnologiesComponent },
       { path: 'salaryEvolution', component: SalaryEvoltionGraphComponent },
+      { path : 'PostAppEvolution/:id' , component : PostAppEvolutionTableNdGraphComponent},
       { path : 'PostAppEvolution' , component : PostAppEvolutionTableNdGraphComponent},
       { path: 'diplomeRatio', component: DiplomeRatioComponent },
 ];
+
