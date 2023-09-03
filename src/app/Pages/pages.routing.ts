@@ -19,6 +19,9 @@ import {
   UpdateCollaboratorByTreeactorsComponent
 } from "./update-collaborator-by-treeactors/update-collaborator-by-treeactors.component";
 import {CollaboratorsListComponent} from "./collaborators-list/collaborators-list.component";
+import {
+  UpdateCollaborateurByManagerComponent
+} from "./update-collaborateur-by-manager/update-collaborateur-by-manager.component";
 
 export const PagesRoutes: Routes = [
       { path: '', redirectTo: 'managers', pathMatch: 'full' },
@@ -35,10 +38,7 @@ export const PagesRoutes: Routes = [
       { path: 'recruitment', component: RecruitmentChartComponent },
       { path: 'collaborateurs', component: GetAllCollaborateursComponent },
       { path: 'diplomeRatio', component: DiplomeRatioComponent },
-      {
-        path: 'salaryEvolution/:id',
-        component: SalaryEvolutionOfCollabComponent,
-      },
+      { path: 'salaryEvolution/:id', component: SalaryEvolutionOfCollabComponent,},
       { path :'listofcollaboratorstoupdate',component:CollaboratorsListComponent},
       { path:'updateCollaboratorsBy3Actor/:id' ,component:UpdateCollaboratorByTreeactorsComponent},
       { path: 'TurnOver', component: TauxTurnOverComponent },
@@ -47,5 +47,7 @@ export const PagesRoutes: Routes = [
       { path : 'PostAppEvolution/:id' , component : PostAppEvolutionTableNdGraphComponent},
       { path : 'PostAppEvolution' , component : PostAppEvolutionTableNdGraphComponent},
       { path: 'diplomeRatio', component: DiplomeRatioComponent },
+      {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent
+  }
 ];
 

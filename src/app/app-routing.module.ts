@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import { DiplomeRatioComponent } from './Pages/diplome-ratio/diplome-ratio.component';
 import { LayoutComponent } from './Layout/layout/layout.component';
+import {
+  UpdateCollaborateurByManagerComponent
+} from "./Pages/update-collaborateur-by-manager/update-collaborateur-by-manager.component";
+import {GetAllCollaborateursComponent} from "./Pages/get-all-collaborateurs/get-all-collaborateurs.component";
 
 
 const routes: Routes = [
@@ -18,6 +22,8 @@ const routes: Routes = [
       },
     ],
   },
+  /*{path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent},
+  { path: 'collaborateurs', component: GetAllCollaborateursComponent },*/
 ];
 @NgModule({
   declarations: [],

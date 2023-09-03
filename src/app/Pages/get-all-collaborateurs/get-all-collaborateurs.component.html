@@ -6,7 +6,6 @@
     </div>
   </div>
 </div>
-<!-- Insert your old code here -->
 <div class="container">
   <div class="card">
     <div class="card-body">
@@ -35,10 +34,11 @@
       <th>Mois BAP</th>
       <th>Certifications</th>
       <th>Diplomes</th>
+      <th>Actions :</th>
     </tr>
     </thead>
     <tbody>
-    
+
     <tr *ngFor="let collaborateur of collaborateurs">
       <td>{{ collaborateur.matricule }}</td>
       <td>{{ collaborateur.nom }}</td>
@@ -69,7 +69,7 @@
       <td>{{ collaborateur.bu }}</td>
       <td>{{ collaborateur.mois_BAP }}</td>
       <td>
-      
+
         <ul>
           <li *ngFor="let certif of collaborateur.certificats">{{ certif.nom }}</li>
         </ul>
@@ -79,10 +79,13 @@
           <li *ngFor="let diplome of collaborateur.diplomes">{{ diplome.type }}</li>
         </ul>
       </td>
+      <td>
+        <button (click)="updateCollaborateur(collaborateur.matricule)" class="btn btn-success" style="margin-right: 10px">Update</button>
+      </td>
     </tr>
     </tbody>
   </table>
     </div>
   </div>
 </div>
-<!-- End of old code -->
+

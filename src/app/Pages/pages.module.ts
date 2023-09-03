@@ -29,6 +29,7 @@ import {CollaboratorsListComponent} from "./collaborators-list/collaborators-lis
 import {
   UpdateCollaboratorByTreeactorsComponent
 } from "./update-collaborator-by-treeactors/update-collaborator-by-treeactors.component";
+import { UpdateCollaborateurByManagerComponent } from './update-collaborateur-by-manager/update-collaborateur-by-manager.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {
     TauxTurnOverComponent,
     TechnologiesComponent,
     DiplomeRatioComponent,
+    UpdateCollaborateurByManagerComponent,
 
   ],
   imports: [

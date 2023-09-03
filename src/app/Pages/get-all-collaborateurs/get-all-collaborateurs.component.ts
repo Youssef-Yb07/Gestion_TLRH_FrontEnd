@@ -21,4 +21,8 @@ export class GetAllCollaborateursComponent {
       console.log(data);  },
       error => console.log(error));
   }
+
+  updateCollaborateur(matricule: number){
+    this.router.navigate(['/dashboard/update-collaborateur', matricule]);
+  }
 }
