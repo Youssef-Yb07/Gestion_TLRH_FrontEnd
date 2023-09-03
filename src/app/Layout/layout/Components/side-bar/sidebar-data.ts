@@ -83,4 +83,9 @@ export const navItems: NavItem[] = [
     iconName: 'aperture',
     route: '/dashboard/salaryEvolution',
   },
+  {
+    displayName: 'AffectedCollabs',
+    iconName: 'poker-chip',
+    route: '/dashboard/AffectedCollabs',
+  },
 ];

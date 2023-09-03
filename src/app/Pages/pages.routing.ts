@@ -19,6 +19,8 @@ import {
   UpdateCollaboratorByTreeactorsComponent
 } from "./update-collaborator-by-treeactors/update-collaborator-by-treeactors.component";
 import {CollaboratorsListComponent} from "./collaborators-list/collaborators-list.component";
+import { AddCollabComponent } from './add-collab/add-collab.component';
+import { CollabAffectedManagerComponent } from './collab-affected-manager/collab-affected-manager.component';
 import {
   UpdateCollaborateurByManagerComponent
 } from "./update-collaborateur-by-manager/update-collaborateur-by-manager.component";
@@ -47,6 +49,12 @@ export const PagesRoutes: Routes = [
       { path : 'PostAppEvolution/:id' , component : PostAppEvolutionTableNdGraphComponent},
       { path : 'PostAppEvolution' , component : PostAppEvolutionTableNdGraphComponent},
       { path: 'diplomeRatio', component: DiplomeRatioComponent },
+      { path: 'add', component: AddCollabComponent },
+      {
+        path: 'AffectedCollabs/:id',
+        component: CollabAffectedManagerComponent,
+        },
+
       {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent
   }
 ];
