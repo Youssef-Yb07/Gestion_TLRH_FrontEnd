@@ -13,6 +13,11 @@ import { salaryPieComponent } from './salary-pie/salary-pie.component';
 import { TauxTurnOverComponent } from './taux-turn-over/taux-turn-over.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import{DiplomeRatioComponent} from './diplome-ratio/diplome-ratio.component';
+import {PostAppEvolutionTableNdGraphComponent} from "./post-app-evolution-table-nd-graph/post-app-evolution-table-nd-graph.component";
+import {CollaboratorsListComponent} from "./collaborators-list/collaborators-list.component";
+import {UpdateCollaboratorByTreeactorsComponent} from "./update-collaborator-by-treeactors/update-collaborator-by-treeactors.component";
+import { AddCollabComponent } from './add-collab/add-collab.component';
+
 // -------------------- Routing --------------------->
 import { RouterModule } from '@angular/router';
 import { PagesRoutes } from './pages.routing';
@@ -21,14 +26,12 @@ import { PagesRoutes } from './pages.routing';
 import { MaterialModule } from '../material.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import {
-  PostAppEvolutionTableNdGraphComponent
-} from "./post-app-evolution-table-nd-graph/post-app-evolution-table-nd-graph.component";
-import {CollaboratorsListComponent} from "./collaborators-list/collaborators-list.component";
-import {
-  UpdateCollaboratorByTreeactorsComponent
-} from "./update-collaborator-by-treeactors/update-collaborator-by-treeactors.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatStepperModule } from '@angular/material/stepper';
+import { CollabAffectedManagerComponent } from './collab-affected-manager/collab-affected-manager.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,8 @@ import {
     TauxTurnOverComponent,
     TechnologiesComponent,
     DiplomeRatioComponent,
+    AddCollabComponent,
+    CollabAffectedManagerComponent,
 
   ],
   imports: [
@@ -55,7 +60,13 @@ import {
     FormsModule,
     MaterialModule,
     NgxChartsModule,
+    MatButtonModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     RouterModule.forChild(PagesRoutes),
+
   ],
   exports: [],
 })

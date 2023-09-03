@@ -84,5 +84,11 @@ export class CollaborateurService {
     const url = `${this.BASE_URL}/update/By3Actors?matricule=${matricule}`;
     return this.httpClient.put(url, collaborateurDto);
   }
-
+  createCollaborateur(collab: Collaborateur): Observable<Collaborateur> {
+    return this.httpClient.post<Collaborateur>(`${this.BASE_URL}/createCollaborateur`, collab);
+  }
+ 
+  findCollabsAssociatedToManagerRH(idManagerRH: number): Observable<any> {
+    return this.httpClient.get<any>(`${this.BASE_URL}/get/collaborators/associated/managerRH/${idManagerRH}`);
+  }
 }
