@@ -24,19 +24,19 @@
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Manager RH actuel </mat-label>
-                <select matNativeControl placeholder="Sélectionnez un gestionnaire" formControlName="firstCtrl" [(ngModel)]="collab.managerRH" required>
+                <select matNativeControl placeholder="Sélectionnez un gestionnaire" formControlName="firstCtrl" [(ngModel)]="selectedManager" required>
                     <option *ngFor="let manager of managers " [ngValue]="manager">
                       {{ manager.nom }} {{ manager.prenom }}
                     </option>
                 </select>
             </mat-form-field>
-            
+
             <mat-form-field>
                 <mat-label>Sexe </mat-label>
                 <select matNativeControl id="sexe" formControlName="firstCtrl" [(ngModel)]="collab.sexe" required>
                     <option value="F" selected>Femme</option>
                     <option value="H" >Homme</option>
-                </select> 
+                </select>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Site</mat-label>
@@ -63,14 +63,14 @@
                 <select matNativeControl id="ancienCollab" formControlName="firstCtrl" [(ngModel)]="collab.ancien_Collaborateur" >
                     <option value="true" >True</option>
                     <option value="false" selected>False</option>
-                </select> 
+                </select>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Participé au séminaire d'intégration </mat-label>
                 <select matNativeControl id="seminaire" formControlName="firstCtrl" [(ngModel)]="collab.seminaireIntegration" >
                     <option value="true" >True</option>
                     <option value="false" selected>False</option>
-                </select> 
+                </select>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Date participation </mat-label>
@@ -91,10 +91,10 @@
             <mat-form-field>
             <select matNativeControl placeholder="Sélectionnez un role" multiple required formControlName="firstCtrl" [(ngModel)]="selectedRole" required>
                 <option *ngFor="let role of roles" [ngValue]="role">
-                  {{ role.role }} 
-                </option>                      
+                  {{ role.role }}
+                </option>
               </select>
-            </mat-form-field>  
+            </mat-form-field>
             <div>
               <button mat-button matStepperNext>Next</button>
             </div>
@@ -102,56 +102,55 @@
     </mat-step>
 
 
-    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
-        <form [formGroup]="secondFormGroup" class="center-content">
-            <ng-template matStepLabel>Diplômes</ng-template>
-            <mat-form-field>
-                <mat-label>Niveau</mat-label>
-                <select matNativeControl id="niveau" formControlName="secondCtrl">
-                    <option value="BAC+1">BAC+1</option>
-                    <option value="BAC+2">BAC+2</option>
-                    <option value="BAC+3">BAC+3</option>
-                    <option value="BAC+4">BAC+4</option>
-                    <option value="BAC+5">BAC+5</option>
-                </select>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Ecole</mat-label>
-                <input matInput placeholder="" formControlName="secondCtrl" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Type ecole</mat-label>
-                <select matNativeControl id="typeEcole" formControlName="secondCtrl">
-                    <option value="nationale">nationale</option>
-                    <option value="internationale">internationale</option>
-                </select>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Type de diplôme</mat-label>
-                <select matNativeControl id="typeDiplome" formControlName="secondCtrl">
-                    <option value="étatique">étatique</option>
-                    <option value="Prive">Prive</option>
-                </select>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>promotion </mat-label>
-                <input matInput placeholder="EX : 2019" formControlName="secondCtrl">
-            </mat-form-field>
-                 
-            <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
-            </div>
-        </form>
-    </mat-step>
-    
-    
-    
-    
+  <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+    <form [formGroup]="secondFormGroup" class="center-content">
+      <ng-template matStepLabel>Diplôme</ng-template>
 
-    
-    
-    <!-- add-collab.component.html -->
+      <mat-form-field>
+        <mat-label>Niveau</mat-label>
+        <select matNativeControl formControlName="niveau">
+          <option value="BAC+1">BAC+1</option>
+          <option value="BAC+2">BAC+2</option>
+          <option value="BAC+3">BAC+3</option>
+          <option value="BAC+4">BAC+4</option>
+          <option value="BAC+5">BAC+5</option>
+        </select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ecole</mat-label>
+        <input matInput formControlName="ecole" placeholder="" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Type ecole</mat-label>
+        <select matNativeControl formControlName="typeEcole">
+          <option value="nationale">nationale</option>
+          <option value="internationale">internationale</option>
+        </select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Type de diplôme</mat-label>
+        <select matNativeControl formControlName="typeDiplome">
+          <option value="étatique">étatique</option>
+          <option value="Prive">Prive</option>
+        </select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Promotion</mat-label>
+        <input matInput formControlName="promotion" placeholder="EX : 2019">
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext (click)="addDiploma()">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+
+
+
+  <!-- add-collab.component.html -->
 <mat-step [stepControl]="thirdFormGroup" errorMessage="Diplome is required.">
     <form [formGroup]="thirdFormGroup" class="center-content" >
       <ng-template matStepLabel>Compétences</ng-template>
@@ -176,7 +175,7 @@
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button (click)="stepper.reset()">Reset</button>
-        <button mat-button type="submit">Add</button>
+        <button mat-button type="submit" class="btn btn-success">Add</button>
         <button mat-button (click)="submitForm()">Reset</button>
         </div>
         </form>

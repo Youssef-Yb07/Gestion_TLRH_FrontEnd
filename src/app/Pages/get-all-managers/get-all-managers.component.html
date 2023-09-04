@@ -35,6 +35,7 @@
       <th>Mois BAP</th>
       <th>Certifications</th>
       <th>Diplomes</th>
+      <th>Ajouter Collaborateur</th>
     </tr>
     </thead>
     <tbody>
@@ -77,10 +78,14 @@
           <li *ngFor="let diplome of manager.diplomes">{{ diplome.type }}</li>
         </ul>
       </td>
+      <td>
+        <button mat-icon-button (click)="redirectNonAffectedCollabs(manager.matricule)">
+          <mat-icon>add</mat-icon>
+        </button>
+      </td>
     </tr>
     </tbody>
   </table>
     </div>
   </div>
 </div>
-<!-- End of old code -->
