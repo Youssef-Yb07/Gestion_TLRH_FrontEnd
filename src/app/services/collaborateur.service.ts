@@ -87,10 +87,9 @@ export class CollaborateurService {
   createCollaborateur(collab: Collaborateur): Observable<Collaborateur> {
     return this.httpClient.post<Collaborateur>(`${this.BASE_URL}/createCollaborateur`, collab);
   }
-
   findCollabsAssociatedToManagerRH(idManagerRH: number): Observable<any> {
     return this.httpClient.get<any>(`${this.BASE_URL}/get/collaborators/associated/managerRH/${idManagerRH}`);
-  }
+  }
   updateCollaborateurByManager(collaborateur :Collaborateur , matricule: number): Observable<Collaborateur> {
     return this.httpClient.put<Collaborateur>(`${this.BASE_URL}/update/ByManager?matricule=${matricule}`,collaborateur);
   }
@@ -99,6 +98,17 @@ export class CollaborateurService {
   }
   createManagerRh(id: number): Observable<Collaborateur> {
     return this.httpClient.post<Collaborateur>(`${this.BASE_URL}/createManagerRH/${id}`, null);
+  }
+
+  AssignCollaborateursToManager(collaborateurMatricules: number[], managerMatricule: number): Observable<Collaborateur[]> {
+    const collaborateurMatriculesQuery = collaborateurMatricules.join('&');
+    const url = `${this.BASE_URL}/assignCollaborateursToManager?collaborateurMatricules=${collaborateurMatriculesQuery}&managerMatricule=${managerMatricule}`;
+
+    return this.httpClient.put<Collaborateur[]>(url, {});
+  }
+
+  AssignCollaborateurToManager(collaborateurMatricule: number, managerMatricule: number): Observable<Collaborateur> {
+    return this.httpClient.put<Collaborateur>(`${this.BASE_URL}/assignCollaborateurToManager?collaborateurMatricule=${collaborateurMatricule}&managerMatricule=${managerMatricule}`, {});
   }
 
 }

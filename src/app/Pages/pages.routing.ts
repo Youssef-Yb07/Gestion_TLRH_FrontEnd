@@ -24,16 +24,13 @@ import { CollabAffectedManagerComponent } from './collab-affected-manager/collab
 import {
   UpdateCollaborateurByManagerComponent
 } from "./update-collaborateur-by-manager/update-collaborateur-by-manager.component";
-import { LoginComponent } from './login/login.component';
+
 
 export const PagesRoutes: Routes = [
       { path: '', redirectTo: 'managers', pathMatch: 'full' },
       { path: 'managers', component: GetAllManagersComponent },
       { path: 'nonManagers', component: GetNonManagersComponent },
-      {
-        path: 'nonAffectedCollabs',
-        component: CollabNonAffectedManagerComponent,
-      },
+      {path: 'nonAffectedCollabs', component: CollabNonAffectedManagerComponent},
       { path: 'MaleFemaleRatio', component: RatioComponent },
       { path: 'ManagerWithoutAcc', component: GetManagerWithoutAccComponent },
       { path: 'VisualizeRatio', component: RatioComponent },
@@ -51,13 +48,14 @@ export const PagesRoutes: Routes = [
       { path : 'PostAppEvolution' , component : PostAppEvolutionTableNdGraphComponent},
       { path: 'diplomeRatio', component: DiplomeRatioComponent },
       { path: 'add', component: AddCollabComponent },
-      {
-        path: 'AffectedCollabs/:id',
-        component: CollabAffectedManagerComponent,
-        },
+      {path: 'AffectedCollabs/:id', component: CollabAffectedManagerComponent,},
+      {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent},
+      {path: 'nonAffectedCollabs/:matricule', component: CollabNonAffectedManagerComponent},
+      {path: 'GetnonAffectedCollabs', component: GetNonAffectedCollabsComponent},
+
 
       {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent
   },
-  { path: 'login', component: LoginComponent },
+  
 ];
 

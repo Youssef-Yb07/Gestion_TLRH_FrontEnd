@@ -26,17 +26,19 @@
                 <mat-label>Manager RH actuel </mat-label>
                 <mat-select matNativeControl placeholder="Sélectionnez un gestionnaire" formControlName="firstCtrl" [(ngModel)]="collab.managerRH" required>
                     <mat-option *ngFor="let manager of managers " [value]="manager">
+
                       {{ manager.nom }} {{ manager.prenom }}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            
+
             <mat-form-field>
                 <mat-label>Sexe </mat-label>
                 <mat-select matNativeControl id="sexe" formControlName="firstCtrl" [(ngModel)]="collab.sexe" required>
                     <mat-option value="F" selected>Femme</mat-option>
                     <mat-option value="H" >Homme</mat-option>
                 </mat-select> 
+
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Site</mat-label>
@@ -71,6 +73,7 @@
                     <mat-option value="true" >True</mat-option>
                     <mat-option value="false" selected>False</mat-option>
                 </mat-select> 
+
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Date participation </mat-label>
@@ -95,6 +98,7 @@
                 </mat-option>                      
               </mat-select>
             </mat-form-field>  
+
             <div>
               <button mat-button matStepperNext>Next</button>
             </div>
@@ -148,10 +152,13 @@
     
     
     
+  
 
-    
-    
-    <!-- add-collab.component.html -->
+
+
+
+
+  <!-- add-collab.component.html -->
 <mat-step [stepControl]="thirdFormGroup" errorMessage="Diplome is required.">
     <form [formGroup]="thirdFormGroup" class="center-content" >
       <ng-template matStepLabel>Compétences</ng-template>
@@ -176,7 +183,7 @@
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button (click)="stepper.reset()">Reset</button>
-        <button mat-button type="submit">Add</button>
+        <button mat-button type="submit" class="btn btn-success">Add</button>
         <button mat-button (click)="submitForm()">Reset</button>
         </div>
         </form>

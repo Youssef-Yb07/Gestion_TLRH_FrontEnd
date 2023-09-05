@@ -20,7 +20,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'nonAffectedCollabs',
     iconName: 'poker-chip',
-    route: '/dashboard/nonAffectedCollabs',
+    route: '/dashboard/GetnonAffectedCollabs',
   },
   {
     displayName: 'MaleFemaleRatio',
@@ -86,6 +86,10 @@ export const navItems: NavItem[] = [
   {
     displayName: 'AffectedCollabs',
     iconName: 'poker-chip',
-    route: '/dashboard/AffectedCollabs',
-  },
+    route: '/dashboard/AffectedCollabs',},
+  {
+    displayName: 'Add collaboarteur',
+    iconName: 'poker-chip',
+    route: '/dashboard/add',
+  }
 ];

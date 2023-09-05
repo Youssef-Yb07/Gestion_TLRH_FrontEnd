@@ -26,14 +26,19 @@ import { PagesRoutes } from './pages.routing';
 import { MaterialModule } from '../material.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
+
+import { FormsModule } from '@angular/forms';
 import { UpdateCollaborateurByManagerComponent } from './update-collaborateur-by-manager/update-collaborateur-by-manager.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { CollabAffectedManagerComponent } from './collab-affected-manager/collab-affected-manager.component';
-import { LoginComponent } from './login/login.component';
+
+import {MatSelectModule} from "@angular/material/select";
+import { GetNonAffectedCollabsComponent } from './get-non-affected-collabs/get-non-affected-collabs.component';
+
 
 @NgModule({
   declarations: [
@@ -56,7 +61,9 @@ import { LoginComponent } from './login/login.component';
     AddCollabComponent,
     CollabAffectedManagerComponent,
     UpdateCollaborateurByManagerComponent,
-    LoginComponent
+
+    GetNonAffectedCollabsComponent,
+
   ],
   imports: [
     CommonModule,
@@ -67,6 +74,7 @@ import { LoginComponent } from './login/login.component';
     MatStepperModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    MatSelectModule,
     MatInputModule,
     RouterModule.forChild(PagesRoutes),
 
