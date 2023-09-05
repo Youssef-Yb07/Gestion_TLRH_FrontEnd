@@ -24,6 +24,8 @@ import { CollabAffectedManagerComponent } from './collab-affected-manager/collab
 import {
   UpdateCollaborateurByManagerComponent
 } from "./update-collaborateur-by-manager/update-collaborateur-by-manager.component";
+import { GetNonAffectedCollabsComponent } from './get-non-affected-collabs/get-non-affected-collabs.component';
+import { AffectCompteToCollabComponent } from './affect-compte-to-collab/affect-compte-to-collab.component';
 
 
 export const PagesRoutes: Routes = [
@@ -52,7 +54,7 @@ export const PagesRoutes: Routes = [
       {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent},
       {path: 'nonAffectedCollabs/:matricule', component: CollabNonAffectedManagerComponent},
       {path: 'GetnonAffectedCollabs', component: GetNonAffectedCollabsComponent},
-
+      {path: 'AffectCompteToCollab', component: AffectCompteToCollabComponent},
 
       {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent
   },

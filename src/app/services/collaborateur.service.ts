@@ -110,5 +110,8 @@ export class CollaborateurService {
   AssignCollaborateurToManager(collaborateurMatricule: number, managerMatricule: number): Observable<Collaborateur> {
     return this.httpClient.put<Collaborateur>(`${this.BASE_URL}/assignCollaborateurToManager?collaborateurMatricule=${collaborateurMatricule}&managerMatricule=${managerMatricule}`, {});
   }
+  collabWithoutCompte(): Observable<Collaborateur[]> {
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/CollabWithoutCompte`);
+  }
 
 }

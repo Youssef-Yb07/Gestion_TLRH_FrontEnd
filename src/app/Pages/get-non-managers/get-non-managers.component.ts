@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Collaborateur } from 'src/app/classes/collaborateur';
 import { CollaborateurService } from 'src/app/services/collaborateur.service';
 import {ActivatedRoute, Router} from "@angular/router";
+import { get } from 'http';
 
 @Component({
   selector: 'app-get-non-managers',
@@ -23,7 +24,9 @@ export class GetNonManagersComponent {
       error => console.log(error));
   }
   createManager(id:number){
-    location.reload();
+
+     location.reload();
     this.collaborateurService.createManagerRh(id).subscribe(); 
+    
   }
 }
