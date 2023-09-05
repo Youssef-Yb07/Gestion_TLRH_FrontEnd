@@ -75,6 +75,10 @@
           <li *ngFor="let diplome of nonManager.diplomes">{{ diplome.type }}</li>
         </ul>
       </td>
+      <td>
+        <button (click)="createManager(nonManager.matricule)" class="btn btn-primary" style="margin-right: 10px">Add As Manager</button>
+      </td>
+       
     </tr>
     </tbody>
   </table>

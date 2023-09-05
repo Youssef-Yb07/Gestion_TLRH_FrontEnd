@@ -24,6 +24,7 @@ import { CollabAffectedManagerComponent } from './collab-affected-manager/collab
 import {
   UpdateCollaborateurByManagerComponent
 } from "./update-collaborateur-by-manager/update-collaborateur-by-manager.component";
+import { LoginComponent } from './login/login.component';
 
 export const PagesRoutes: Routes = [
       { path: '', redirectTo: 'managers', pathMatch: 'full' },
@@ -56,6 +57,7 @@ export const PagesRoutes: Routes = [
         },
 
       {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent
-  }
+  },
+  { path: 'login', component: LoginComponent },
 ];
 

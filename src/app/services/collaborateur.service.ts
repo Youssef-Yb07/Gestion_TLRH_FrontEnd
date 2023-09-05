@@ -97,5 +97,8 @@ export class CollaborateurService {
   getCollaborateurByID(id: number): Observable<Collaborateur> {
     return this.httpClient.get<Collaborateur>(`${this.BASE_URL}/get/by/matricule?matricule=${id}`);
   }
+  createManagerRh(id: number): Observable<Collaborateur> {
+    return this.httpClient.post<Collaborateur>(`${this.BASE_URL}/createManagerRH/${id}`, null);
+  }
 
 }

@@ -26,14 +26,6 @@ import { PagesRoutes } from './pages.routing';
 import { MaterialModule } from '../material.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import {
-  PostAppEvolutionTableNdGraphComponent
-} from "./post-app-evolution-table-nd-graph/post-app-evolution-table-nd-graph.component";
-import {CollaboratorsListComponent} from "./collaborators-list/collaborators-list.component";
-import {
-  UpdateCollaboratorByTreeactorsComponent
-} from "./update-collaborator-by-treeactors/update-collaborator-by-treeactors.component";
 import { UpdateCollaborateurByManagerComponent } from './update-collaborateur-by-manager/update-collaborateur-by-manager.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -41,6 +33,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { CollabAffectedManagerComponent } from './collab-affected-manager/collab-affected-manager.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +56,7 @@ import { CollabAffectedManagerComponent } from './collab-affected-manager/collab
     AddCollabComponent,
     CollabAffectedManagerComponent,
     UpdateCollaborateurByManagerComponent,
-
+    LoginComponent
   ],
   imports: [
     CommonModule,
