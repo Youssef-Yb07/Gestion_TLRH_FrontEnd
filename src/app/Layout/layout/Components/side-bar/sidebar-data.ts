@@ -91,5 +91,11 @@ export const navItems: NavItem[] = [
     displayName: 'Add collaboarteur',
     iconName: 'poker-chip',
     route: '/dashboard/add',
+  },
+  {
+    displayName: 'collaborateurs list',
+    iconName: 'list',
+    route: '/dashboard/listofcollaboratorstoupdate',
   }
+
 ];
