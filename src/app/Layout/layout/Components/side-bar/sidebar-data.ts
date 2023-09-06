@@ -97,5 +97,17 @@ export const navItems: NavItem[] = [
     iconName: 'list',
     route: '/dashboard/listofcollaboratorstoupdate',
   }
+  ,
+  {
+    displayName: 'Managers RH Activated',
+    iconName: 'list',
+    route: '/dashboard/ManagersRH/Activated',
+  }
+  ,
+  {
+    displayName: 'Managers RH Desactivated',
+    iconName: 'list',
+    route: '/dashboard/ManagersRH/Desactivated',
+  }
 
 ];

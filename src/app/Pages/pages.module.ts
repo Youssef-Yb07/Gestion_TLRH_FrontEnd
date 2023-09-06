@@ -39,6 +39,10 @@ import { CollabAffectedManagerComponent } from './collab-affected-manager/collab
 import {MatSelectModule} from "@angular/material/select";
 import { GetNonAffectedCollabsComponent } from './get-non-affected-collabs/get-non-affected-collabs.component';
 import { AffectCompteToCollabComponent } from './affect-compte-to-collab/affect-compte-to-collab.component';
+import { GetManagersRhWithStatusActivatedComponent } from './get-managers-rh-with-status-activated/get-managers-rh-with-status-activated.component';
+import {
+  GetManagersRhWithStatusDesactivatedComponent
+} from "./get-managers-rh-with-status-desactivated/get-managers-rh-with-status-desactivated.component";
 
 
 @NgModule({
@@ -64,6 +68,8 @@ import { AffectCompteToCollabComponent } from './affect-compte-to-collab/affect-
     UpdateCollaborateurByManagerComponent,
     AffectCompteToCollabComponent,
     GetNonAffectedCollabsComponent,
+    GetManagersRhWithStatusActivatedComponent,
+    GetManagersRhWithStatusDesactivatedComponent
 
   ],
   imports: [

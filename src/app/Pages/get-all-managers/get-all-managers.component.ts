@@ -22,9 +22,7 @@ export class GetAllManagersComponent implements OnInit {
       console.log(data);  },
       error => console.log(error));
   }
-  redirectNonAffectedCollabs(matricule :number){
-    this.router.navigate(['/dashboard/nonAffectedCollabs',matricule]);
-  }
+
 
 
 }

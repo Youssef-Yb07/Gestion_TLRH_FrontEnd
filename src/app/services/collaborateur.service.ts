@@ -116,4 +116,21 @@ export class CollaborateurService {
     return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/CollabWithoutCompte`);
   }
 
+  getManagerRHWithStatusDesactivated():Observable<Collaborateur[]>{
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/ManagerRH/Desactivated`);
+  }
+
+  getManagerRHWithStatusActivated():Observable<Collaborateur[]>{
+    return this.httpClient.get<Collaborateur[]>(`${this.BASE_URL}/get/ManagerRH/Activated`);
+  }
+
+  ActivateStatusManagerRH(matricule:number):Observable<Collaborateur>{
+    return this.httpClient.put<Collaborateur>(`${this.BASE_URL}/ActivateStatusManagerRH?matricule=${matricule}`, {});
+  }
+
+  DesactivateStatusManagerRH(matricule:number):Observable<Collaborateur>{
+    return this.httpClient.put<Collaborateur>(`${this.BASE_URL}/DesactivateStatusManagerRH?matricule=${matricule}`, {});
+  }
+
+
 }

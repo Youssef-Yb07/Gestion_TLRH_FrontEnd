@@ -22,8 +22,6 @@ const routes: Routes = [
       },
     ],
   },
-  /*{path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent},
-  { path: 'collaborateurs', component: GetAllCollaborateursComponent },*/
 ];
 @NgModule({
   declarations: [],

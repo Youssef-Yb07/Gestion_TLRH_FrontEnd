@@ -26,6 +26,12 @@ import {
 } from "./update-collaborateur-by-manager/update-collaborateur-by-manager.component";
 import { GetNonAffectedCollabsComponent } from './get-non-affected-collabs/get-non-affected-collabs.component';
 import { AffectCompteToCollabComponent } from './affect-compte-to-collab/affect-compte-to-collab.component';
+import {
+  GetManagersRhWithStatusActivatedComponent
+} from "./get-managers-rh-with-status-activated/get-managers-rh-with-status-activated.component";
+import {
+  GetManagersRhWithStatusDesactivatedComponent
+} from "./get-managers-rh-with-status-desactivated/get-managers-rh-with-status-desactivated.component";
 
 
 export const PagesRoutes: Routes = [
@@ -55,9 +61,8 @@ export const PagesRoutes: Routes = [
       {path: 'nonAffectedCollabs/:matricule', component: CollabNonAffectedManagerComponent},
       {path: 'GetnonAffectedCollabs', component: GetNonAffectedCollabsComponent},
       {path: 'AffectCompteToCollab', component: AffectCompteToCollabComponent},
-
-      {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent
-  },
-  
+      {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent},
+      {path: 'ManagersRH/Activated', component: GetManagersRhWithStatusActivatedComponent},
+      {path: 'ManagersRH/Desactivated', component: GetManagersRhWithStatusDesactivatedComponent},
 ];
 
