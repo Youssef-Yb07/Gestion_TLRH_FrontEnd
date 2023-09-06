@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Collaborateur } from '../classes/collaborateur';
 import {types} from "sass";
 import List = types.List;
+import {UpdateBy3ActorsDto} from "../classes/UpdateBy3ActorsDto";
 
 @Injectable({
   providedIn: 'root',
@@ -80,10 +81,11 @@ export class CollaborateurService {
     return this.httpClient.get<Map<number, string[]>>(`${this.BASE_URL}/get/EvolutionPostAPP/${collaborateurId}`);
   }
 
-  updateCollaborateurBy3Actors(matricule: number, collaborateurDto: any): Observable<any> {
+  updateCollaborateurBy3Actors(matricule: number, collaborateurDto: UpdateBy3ActorsDto): Observable<any> {
     const url = `${this.BASE_URL}/update/By3Actors?matricule=${matricule}`;
-    return this.httpClient.put(url, collaborateurDto);
+    return this.httpClient.put<Collaborateur>(url, collaborateurDto);
   }
+
   createCollaborateur(collab: Collaborateur): Observable<Collaborateur> {
     return this.httpClient.post<Collaborateur>(`${this.BASE_URL}/createCollaborateur`, collab);
   }

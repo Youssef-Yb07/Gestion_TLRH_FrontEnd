@@ -26,8 +26,7 @@ export class CollaboratorsListComponent {
   }
 
   updateCollaborator(ID: number) {
-    this.router.navigate(['updateCollaboratorsBy3Actor',ID]);
-
+    this.router.navigate(['/dashboard/updateCollaboratorsBy3Actor', ID]);
 
   }
 }
