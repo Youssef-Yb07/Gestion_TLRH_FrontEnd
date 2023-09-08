@@ -32,6 +32,9 @@ import {
 import {
   GetManagersRhWithStatusDesactivatedComponent
 } from "./get-managers-rh-with-status-desactivated/get-managers-rh-with-status-desactivated.component";
+import {
+  ImportOrExportCollaboratorsExcelComponent
+} from "./import-or-export-collaborators-excel/import-or-export-collaborators-excel.component";
 
 
 export const PagesRoutes: Routes = [
@@ -64,5 +67,6 @@ export const PagesRoutes: Routes = [
       {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent},
       {path: 'ManagersRH/Activated', component: GetManagersRhWithStatusActivatedComponent},
       {path: 'ManagersRH/Desactivated', component: GetManagersRhWithStatusDesactivatedComponent},
+      {path: 'Import_Export/Excel', component: ImportOrExportCollaboratorsExcelComponent},
 ];
 

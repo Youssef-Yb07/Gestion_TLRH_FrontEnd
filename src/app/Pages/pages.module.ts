@@ -43,6 +43,7 @@ import { GetManagersRhWithStatusActivatedComponent } from './get-managers-rh-wit
 import {
   GetManagersRhWithStatusDesactivatedComponent
 } from "./get-managers-rh-with-status-desactivated/get-managers-rh-with-status-desactivated.component";
+import { ImportOrExportCollaboratorsExcelComponent } from './import-or-export-collaborators-excel/import-or-export-collaborators-excel.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import {
     AffectCompteToCollabComponent,
     GetNonAffectedCollabsComponent,
     GetManagersRhWithStatusActivatedComponent,
-    GetManagersRhWithStatusDesactivatedComponent
+    GetManagersRhWithStatusDesactivatedComponent,
+    ImportOrExportCollaboratorsExcelComponent
 
   ],
   imports: [
