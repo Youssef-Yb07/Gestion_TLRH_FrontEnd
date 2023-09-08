@@ -29,4 +29,13 @@ export class CollaboratorsListComponent {
     this.router.navigate(['/dashboard/updateCollaboratorsBy3Actor', ID]);
 
   }
+  technologie(matricule: number) {
+    this.router.navigate(['/dashboard/Technologies', matricule]);
+   }
+   SalaryEvolution(matricule: number) {
+     this.router.navigate(['/dashboard/salaryEvolution', matricule]);
+   }
+  VersADD() {
+  this.router.navigateByUrl('/dashboard/add');
+  }
 }

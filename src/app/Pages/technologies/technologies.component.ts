@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CollaborateurService } from "../../services/collaborateur.service";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-technologies',
@@ -11,7 +11,9 @@ export class TechnologiesComponent implements OnInit {
   technologies: any[];
   collaborateurId: number;
 
-  constructor(private collaborateurService: CollaborateurService, private route: ActivatedRoute) { }
+  constructor(private collaborateurService: CollaborateurService,
+     private route: ActivatedRoute,
+     private router:Router) { }
 
   ngOnInit() {
 
@@ -27,5 +29,8 @@ export class TechnologiesComponent implements OnInit {
 
       });
     });
+  }
+  listcollab() {
+    this.router.navigate(['/dashboard/collaborateurs']);
   }
 }

@@ -21,7 +21,8 @@ export class SalaryEvolutionOfCollabComponent implements OnInit {
 
   constructor(
     private collaborateurService: CollaborateurService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -37,6 +38,10 @@ export class SalaryEvolutionOfCollabComponent implements OnInit {
         });
     });
   }
+  listcollab() {
+    this.router.navigate(['/dashboard/collaborateurs']);
+
+  }
 
 
 }

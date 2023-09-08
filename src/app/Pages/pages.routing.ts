@@ -32,6 +32,7 @@ import {
 import {
   GetManagersRhWithStatusDesactivatedComponent
 } from "./get-managers-rh-with-status-desactivated/get-managers-rh-with-status-desactivated.component";
+import { CreateCompteComponent } from './create-compte/create-compte.component';
 
 
 export const PagesRoutes: Routes = [
@@ -64,5 +65,6 @@ export const PagesRoutes: Routes = [
       {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent},
       {path: 'ManagersRH/Activated', component: GetManagersRhWithStatusActivatedComponent},
       {path: 'ManagersRH/Desactivated', component: GetManagersRhWithStatusDesactivatedComponent},
+      { path: 'CreateCompte', component: CreateCompteComponent },
 ];
 

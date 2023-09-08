@@ -80,8 +80,14 @@
         </ul>
       </td>
       <td>
-        <button (click)="updateCollaborateur(collaborateur.matricule)" class="btn btn-success" style="margin-right: 10px">Update</button>
-      </td>
+        <button (click)="updateCollaborateur(collaborateur.matricule)" type="button" class="btn btn-success" >Update</button>
+    </td>
+    <td>
+        <button  (click)="technologie(collaborateur.matricule)" type="button" class="btn btn-dark">Techno</button>
+         <br><br>
+        <button  (click)="SalaryEvolution(collaborateur.matricule)" type="button" class="btn btn-dark">SalaryEvolution</button>
+          
+  </td>
     </tr>
     </tbody>
   </table>

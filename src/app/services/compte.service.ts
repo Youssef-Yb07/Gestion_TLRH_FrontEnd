@@ -19,4 +19,9 @@ export class CompteService {
   affectCompteToCollab( idCompte: number,idCollab: number) :Observable<Compte>{
     return this.httpClient.put<Compte>(`${this.BASE_URL}/AffectCompteToCollab?compteId=${idCompte}&collaborateurId=${idCollab}`,{});
   }
+  AjouterCompte(email: string): Observable<String> {
+   
+    return this.httpClient.post<String>(`${this.BASE_URL}/addCompte?email=${email}`, {});
+  } 
+
 }
