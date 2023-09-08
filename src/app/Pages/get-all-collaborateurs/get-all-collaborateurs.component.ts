@@ -21,14 +21,19 @@ export class GetAllCollaborateursComponent {
       console.log(data);  },
       error => console.log(error));
   }
-
   updateCollaborateur(matricule: number){
     this.router.navigate(['/dashboard/update-collaborateur', matricule]);
   }
+<<<<<<< HEAD
  technologie(matricule: number) {
    this.router.navigate(['/dashboard/Technologies', matricule]);
   }
   SalaryEvolution(matricule: number) {
     this.router.navigate(['/dashboard/salaryEvolution', matricule]);
   }
+=======
+
+>>>>>>> 07ee40a992420c4146ccc6960e716b443c879f74
 }
+
+

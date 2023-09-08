@@ -132,5 +132,19 @@ export class CollaborateurService {
     return this.httpClient.put<Collaborateur>(`${this.BASE_URL}/DesactivateStatusManagerRH?matricule=${matricule}`, {});
   }
 
+  exportCollaboratorsToExcelFile(): Observable<ArrayBuffer> {
+    const url = `${this.BASE_URL}/export/collaborateursData`;
+    return this.httpClient.get(url, {
+      responseType: 'arraybuffer',
+    });
+  }
+
+  uploadCollaborateursExcel(file: File): Observable<any> {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    return this.httpClient.post<any>(`${this.BASE_URL}/upload/collaborateursData`, formData);
+  }
+
 
 }

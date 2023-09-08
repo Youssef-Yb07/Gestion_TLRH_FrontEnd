@@ -109,5 +109,12 @@ export const navItems: NavItem[] = [
     iconName: 'list',
     route: '/dashboard/ManagersRH/Desactivated',
   }
+  ,
+  {
+    displayName: 'Importer ou Exporter',
+    iconName: 'tooltip',
+    route: '/dashboard/Import_Export/Excel',
+  }
+
 
 ];
