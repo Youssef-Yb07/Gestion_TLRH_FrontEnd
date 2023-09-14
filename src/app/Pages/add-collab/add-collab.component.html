@@ -180,11 +180,11 @@
     <div class="card-body">
       <mat-form-field>
         <mat-label>nom</mat-label>
-        <input matInput placeholder="EX :java 5"  [(ngModel)]="technologies[i].nom">
+        <input matInput placeholder="EX :java 5"  >
       </mat-form-field>
       <mat-form-field>
         <mat-label>niveau</mat-label>
-        <input matInput placeholder="From 1 to 5" type="number" min="1" max="5"  [(ngModel)]="technologies[i].niveau">
+        <input matInput placeholder="From 1 to 5" type="number" min="1" max="5"  >
       </mat-form-field>
     </div>
   </div>
@@ -192,8 +192,7 @@
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button (click)="stepper.reset()">Reset</button>
-        <button mat-button type="submit" class="btn btn-success">Add</button>
-        <button mat-button (click)="submitForm()">Reset</button>
+        <button class="btn btn-primary" mat-button (click)="submitForm()" >Add</button>
         </div>
         </form>
     </mat-step>

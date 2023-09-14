@@ -5,7 +5,7 @@ export const navItems3: NavItem[] = [
         navCap: 'Espace administrateur',
     }, {
         displayName: 'managers',
-        iconName: 'layout-dashboard',
+        iconName: 'list',
         route: '/dashboard/managers',
     }, {
         displayName: 'CreateCompte',
@@ -13,8 +13,13 @@ export const navItems3: NavItem[] = [
         route: '/dashboard/CreateCompte',
     }, {
         displayName:'AffectCompteToCollab' ,
-        iconName: 'poker-chip',
+        iconName: 'user-plus',
         route: '/dashboard/AffectCompteToCollab',
+    },
+    {
+        displayName:'Importation et Exporation' ,
+        iconName: 'user',
+        route: '/dashboard/Import_Export/Excel',
     },
     
 ]

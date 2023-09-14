@@ -7,55 +7,53 @@ export const navItems2: NavItem[] = [
    
     {
         displayName: 'collaborateurs',
-        iconName: 'mood-smile',
+        iconName: 'list',
         route: '/dashboard/listofcollaboratorstoupdate',
     },  {
         displayName: 'managers',
-        iconName: 'layout-dashboard',
+        iconName: 'list',
         route: '/dashboard/managers',
     }, {
         displayName: 'nonManagers',
-        iconName: 'rosette',
+        iconName: 'list',
         route: '/dashboard/nonManagers',
     }, 
     {
-        displayName: 'ManagersRH-Activated',
-      iconName: 'user-plus',
+        displayName: 'Desactiver Manager',
+      iconName: 'lock',
         route: '/dashboard/ManagersRH/Activated',
     },
     {
-    displayName: 'ManagersRH-Desactivated',
-     iconName: 'user-plus',
+    displayName: 'Activer Manager',
+     iconName: 'lock-open',
     route: '/dashboard/ManagersRH/Desactivated',
     },
     {
         navCap: 'reporting',
-    }, {
-        displayName: 'PourcentageEcole',
-        iconName: 'lock',
-        route: '/dashboard/PourcentageEcole',
-    },
+    }, 
     {
-        displayName: 'diplomeRatio',
-        iconName: 'aperture',
-        route: '/dashboard/diplomeRatio',
-    }, {
-        displayName: 'VisualizeRatio',
-        iconName: 'tooltip',
-        route: '/dashboard/VisualizeRatio',
-    }, {
-        displayName: 'MaleFemaleRatio',
-        iconName: 'list',
-        route: '/dashboard/MaleFemaleRatio',
-    }, {
         displayName: 'TurnOver',
-        iconName: 'aperture',
+        iconName: 'chart-line',
         route: '/dashboard/TurnOver',
     }, 
     {
+        displayName: 'diplomeRatio',
+        iconName: 'chart-donut',
+        route: '/dashboard/diplomeRatio',
+    },
+    {
         displayName: 'recruitment',
-        iconName: 'user-plus',
+        iconName: 'trending-up',
         route: '/dashboard/recruitment',
+    },{
+        displayName: 'PourcentageEcole',
+        iconName: 'percentage',
+        route: '/dashboard/PourcentageEcole',
+    },
+    {
+        displayName: 'MaleFemaleRatio',
+        iconName: 'chart-donut',
+        route: '/dashboard/MaleFemaleRatio',
     },
     
 

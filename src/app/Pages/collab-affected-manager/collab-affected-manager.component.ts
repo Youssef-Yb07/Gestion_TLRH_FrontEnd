@@ -28,4 +28,15 @@ export class CollabAffectedManagerComponent {
     },
       error => console.log(error));
   }
+  updateCollaborateur(matricule: number){
+    this.router.navigate(['/dashboard/update-collaborateur', matricule]);
+  }
+
+  technologie(matricule: number) {
+    this.router.navigate(['/dashboard/Technologies', matricule]);
+   }
+   SalaryEvolution(matricule: number) {
+     this.router.navigate(['/dashboard/salaryEvolution', matricule]);
+   }
+ 
 }

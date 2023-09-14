@@ -32,13 +32,12 @@ import {
 import {
   GetManagersRhWithStatusDesactivatedComponent
 } from "./get-managers-rh-with-status-desactivated/get-managers-rh-with-status-desactivated.component";
-<<<<<<< HEAD
 import { CreateCompteComponent } from './create-compte/create-compte.component';
-=======
 import {
   ImportOrExportCollaboratorsExcelComponent
 } from "./import-or-export-collaborators-excel/import-or-export-collaborators-excel.component";
->>>>>>> 07ee40a992420c4146ccc6960e716b443c879f74
+import { LoginComponent } from './login/login.component';
+import { LoginForgottenComponent } from './loginForgotten/loginForgotten.component'
 
 
 export const PagesRoutes: Routes = [
@@ -71,10 +70,13 @@ export const PagesRoutes: Routes = [
       {path: 'update-collaborateur/:matricule', component: UpdateCollaborateurByManagerComponent},
       {path: 'ManagersRH/Activated', component: GetManagersRhWithStatusActivatedComponent},
       {path: 'ManagersRH/Desactivated', component: GetManagersRhWithStatusDesactivatedComponent},
-<<<<<<< HEAD
       { path: 'CreateCompte', component: CreateCompteComponent },
-=======
       {path: 'Import_Export/Excel', component: ImportOrExportCollaboratorsExcelComponent},
->>>>>>> 07ee40a992420c4146ccc6960e716b443c879f74
+      {path: 'Login', component: LoginComponent},
+      {path: 'Forgotten', component: LoginForgottenComponent}
+    
+    
+
+
 ];
 

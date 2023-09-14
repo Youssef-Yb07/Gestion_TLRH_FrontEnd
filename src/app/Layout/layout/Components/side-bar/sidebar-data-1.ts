@@ -9,37 +9,36 @@ export const navItems1: NavItem[] = [
     },
     {
         displayName: 'collaborateurs',
-        iconName: 'mood-smile',
-        route: '/dashboard/collaborateurs',
+        iconName: 'list',
+        route: '/dashboard/AffectedCollabs/12387',
     },
   
     {
         navCap: 'Reporting',
     },
-    {
-        displayName: 'salaryEvolution',
-        iconName: 'mood-smile',
-        route: '/dashboard/salaryEvolution',
-    }, {
-        displayName: 'VisualizeRatio',
-        iconName: 'tooltip',
-        route: '/dashboard/VisualizeRatio',
-    }, {
-        displayName: 'MaleFemaleRatio',
-        iconName: 'list',
-        route: '/dashboard/MaleFemaleRatio',
-    }, {
-        displayName: 'PourcentageEcole',
-        iconName: 'lock',
-        route: '/dashboard/PourcentageEcole',
-    }, {
+   {
         displayName: 'TurnOver',
-        iconName: 'aperture',
+        iconName: 'chart-line',
         route: '/dashboard/TurnOver',
-    },
+    }, 
+    {
+        displayName: 'diplomeRatio',
+        iconName: 'chart-donut',
+        route: '/dashboard/diplomeRatio',
+    },
     {
         displayName: 'recruitment',
-        iconName: 'user-plus',
+        iconName: 'trending-up',
         route: '/dashboard/recruitment',
-    }
+    },{
+        displayName: 'PourcentageEcole',
+        iconName: 'percentage',
+        route: '/dashboard/PourcentageEcole',
+    },
+    {
+        displayName: 'MaleFemaleRatio',
+        iconName: 'chart-donut',
+        route: '/dashboard/MaleFemaleRatio',
+    },
+    
 ]

@@ -39,7 +39,7 @@ export class SalaryEvolutionOfCollabComponent implements OnInit {
     });
   }
   listcollab() {
-    this.router.navigate(['/dashboard/collaborateurs']);
+    this.router.navigate(['/dashboard/listofcollaboratorstoupdate']);
 
   }
 

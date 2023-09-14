@@ -43,11 +43,11 @@ import { GetManagersRhWithStatusActivatedComponent } from './get-managers-rh-wit
 import {
   GetManagersRhWithStatusDesactivatedComponent
 } from "./get-managers-rh-with-status-desactivated/get-managers-rh-with-status-desactivated.component";
-<<<<<<< HEAD
 import { CreateCompteComponent } from './create-compte/create-compte.component';
-=======
 import { ImportOrExportCollaboratorsExcelComponent } from './import-or-export-collaborators-excel/import-or-export-collaborators-excel.component';
->>>>>>> 07ee40a992420c4146ccc6960e716b443c879f74
+import { log } from 'console';
+import { LoginComponent } from './login/login.component';
+import { LoginForgottenComponent } from './loginForgotten/loginForgotten.component';
 
 
 @NgModule({
@@ -75,11 +75,11 @@ import { ImportOrExportCollaboratorsExcelComponent } from './import-or-export-co
     GetNonAffectedCollabsComponent,
     GetManagersRhWithStatusActivatedComponent,
     GetManagersRhWithStatusDesactivatedComponent,
-<<<<<<< HEAD
-    CreateCompteComponent
-=======
-    ImportOrExportCollaboratorsExcelComponent
->>>>>>> 07ee40a992420c4146ccc6960e716b443c879f74
+    CreateCompteComponent,
+    ImportOrExportCollaboratorsExcelComponent,
+    LoginComponent,
+    LoginForgottenComponent
+
 
   ],
   imports: [
